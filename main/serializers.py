@@ -4,6 +4,7 @@ from .models import Product
 
 
 class ProductSerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
     name = serializers.CharField(required=False, allow_blank=True, max_length=100)
     price = serializers.DecimalField(max_digits=12, decimal_places=0)
     
